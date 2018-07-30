@@ -18,7 +18,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
+				<version>3.1.0</version>
 				<configuration>
 					<archive>
 						<index>false</index>
@@ -50,11 +50,13 @@
 						</_exportcontents>
 						<Import-Package>
 							!com.sun.jdi.*,
+							!com.sun.tools.attach,
 							!sun.misc,
 							!javax.persistence,
 							!scala.*,
 							!org.jruby.*,
 							!com.twitter.util.*,
+							!org.hibernate.validator.*,
 							!jersey.repackaged.*,
 							javax.servlet.*;version="[2.3.0,4.0.0)";resolution:=optional,
 							*
@@ -129,6 +131,15 @@
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-multipart</artifactId>
 			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-common</artifactId>
+			<version>${jersey.version}</version></dependency>
+		<dependency>
+    		<groupId>org.glassfish.jersey.inject</groupId>
+    		<artifactId>jersey-hk2</artifactId>
+    		<version>${jersey.version}</version>
 		</dependency>
 	</dependencies>
 
