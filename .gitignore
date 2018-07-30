@@ -3,3 +3,8 @@ bin
 target
 .idea
 *.iml
+build/com\.eclipsesource\.jaxrs\.jersey\.min/\.classpath
+
+build/com\.eclipsesource\.jaxrs\.jersey\.min/\.project
+
+build/com\.eclipsesource\.jaxrs\.jersey\.min/\.settings/
